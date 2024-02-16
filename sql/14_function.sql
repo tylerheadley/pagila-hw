@@ -14,8 +14,9 @@ INNER JOIN
 INNER JOIN
     category c ON c.category_id = fc.category_id    
 WHERE
-    c.name=$1;
-    
+    c.name=$1
+ORDER BY
+    f.title;
 $$
 LANGUAGE SQL
 IMMUTABLE
